@@ -33,7 +33,7 @@ public class ContentController {
                                            @PathVariable("pageSize") int pageSize){
         List<Map<String,Object>> list = null;
         try {
-            list = contentService.searchPage(keywords,pageNo,pageSize);
+            list = contentService.searchPageHighlightBuilder(keywords,pageNo,pageSize);
         } catch (IOException e) {
             e.printStackTrace();
         }
